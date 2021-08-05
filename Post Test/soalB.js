@@ -6,20 +6,23 @@ var discount = parseInt(prompt('Input discount barang = '));
 var hasilDiskon = hitungDiskon(discount);
 var total = totalHarga(hargaBarang, jumlahBarang, hasilDiskon);
 
-for (let index = 0; index < barangElektronik.length; index++) {
-    var ada = false;
-    if (namaBarang == barangElektronik[index]) {
-        cetak();
-        ada = true
-        break;
-    }
-    if (ada == false) {
-        document.write('Maaf barang yang anda cari tidak tersedia')
-        break;
-    }
+var ketersediaan = cekKetersediaan(namaBarang);
+if (ketersediaan == true) {
+    cetak();
+} else {
+    document.write('Maaf barang yang anda cari tidak tersedia')
 }
 
-
+function cekKetersediaan(nama){
+    for (let index = 0; index < barangElektronik.length; index++) {
+        
+        if (nama == barangElektronik[index]) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
 
 function cetak() {
     document.write('Nama Barang : ' + namaBarang + '<br>')
@@ -28,7 +31,6 @@ function cetak() {
     document.write('Discount ' + discount + '%: Rp. ' + hasilDiskon + '<br>')
     document.write('Total : Rp. ' + total + '<br>')
 }
-
 
 function totalHarga(harga, jumlah, diskon) {
     var hasil;

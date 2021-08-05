@@ -9,7 +9,7 @@
 
 var bil = 1 ;
 var bil2 = 2 ;
-var konfirmasi = confirm('apakah kmu yakin?');
+// var konfirmasi = confirm('apakah kmu yakin?');
 document.write(bil+bil2+ '<br>');
 
 document.write(bil>bil2?'benarr':'salahhh'+'<br>');

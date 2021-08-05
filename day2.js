@@ -79,61 +79,51 @@
 // document.write('<br>');
 // document.write(myArr2)
 
-// var buah = ['apel', 'cimpedek','duku','salak', 'semangka'];
-// buah.push('duren');
-// buah.push('mangga');
-// buah.pop()
-// buah.unshift('jambu');
-// buah.shift();
-// buah.splice(2,3,'melon','anggur');
-// document.write(buah.join('<br>'));
+var buah = ['apel', 'cimpedek','duku','salak', 'semangka'];
+buah.push('duren');
+buah.push('mangga');
+buah.pop()
+buah.unshift('jambu');
+buah.shift();
+buah.splice(2,1,'melon','anggur');
+document.write(buah.join('<br>'));
 
-// var newBuah = buah.slice(1,3);
-// document.write('<br>');
-// document.write('<br>');
-// document.write(newBuah.join('<br>'));
-// document.write('<br>');
-// document.write('<br>');
-// buah.forEach(function(e,i){
-//     document.write((i+1) +'='+e+ '<br>')
-// })
-// var buahBaru = buah.map(function(e,i){
-//     return e + ' Enak dimakan'
-// })
+var newBuah = buah.slice(1,3);
+document.write('<br>');
+document.write('<br>');
+document.write(newBuah.join('<br>'));
+document.write('<br>');
+document.write('<br>');
+buah.forEach(function(e,i){
+    document.write((i+1) +'='+e+ '<br>')
+})
+var buahBaru = buah.map(function(e,i){
+    return e + ' Enak dimakan'
+})
 
-// document.write(buahBaru.join('<br>'));
+document.write(buahBaru.join('<br>'));
 
-var inputSisiA = parseInt(prompt('Masukkan sisi kubus A ', '0-10'));
-var inputSisiB = parseInt(prompt('Masukkan sisi kubus B ', '0-10'));
-var volumeKubusA = hitungKubusA(inputSisiA);
-var volumeKubusB = hitungKubusA(inputSisiB);
-var jumlahKubus = penjumlahanKubus(volumeKubusA, volumeKubusB)
-document.write('Sisi kubus A = '+inputSisiA+'<br>')
-document.write('Sisi kubus B = '+inputSisiB+'<br>')
-document.write('Volume kubus A = '+volumeKubusA+'<br>')
-document.write('Volume kubus B = '+volumeKubusB+'<br>')
-document.write('Jumlah kedua volume kubus = '+jumlahKubus+'<br>')
+// var inputSisiA = parseInt(prompt('Masukkan sisi kubus A ', '0-10'));
+// var inputSisiB = parseInt(prompt('Masukkan sisi kubus B ', '0-10'));
+// var volumeKubusA = hitungVolumeKubus(inputSisiA);
+// var volumeKubusB = hitungVolumeKubus(inputSisiB);
+// var jumlahKubus = penjumlahanKubus(volumeKubusA, volumeKubusB)
+// document.write('Sisi kubus A = '+inputSisiA+'<br>')
+// document.write('Sisi kubus B = '+inputSisiB+'<br>')
+// document.write('Volume kubus A = '+volumeKubusA+'<br>')
+// document.write('Volume kubus B = '+volumeKubusB+'<br>')
+// document.write('Jumlah kedua volume kubus = '+jumlahKubus+'<br>')
 
-function hitungKubusA(sisiA){
-    var jumlah =1;
-    for (let index = 0; index < 3; index++) {
-        jumlah *= sisiA;
-    }
-    return jumlah;
-}
+// function hitungVolumeKubus(sisiA){
+//     var jumlah =1;
+//     for (let index = 0; index < 3; index++) {
+//         jumlah *= sisiA;
+//     }
+//     return jumlah;
+// }
 
-function hitungKubusB(sisiB){
-    var jumlah = 1;
-    var count = 0;
-    while (count<3) {
-        jumlah *= sisiB;
-        count++;
-    }
-    return jumlah;
-}
-
-function penjumlahanKubus(volumeA, volumeB){
-    var jumlah = 0;
-    jumlah = volumeA+volumeB;
-    return jumlah;
-}
+// function penjumlahanKubus(volumeA, volumeB){
+//     var jumlah = 0;
+//     jumlah = volumeA+volumeB;
+//     return jumlah;
+// }

@@ -15,13 +15,11 @@ if (ketersediaan == true) {
 
 function cekKetersediaan(nama){
     for (let index = 0; index < barangElektronik.length; index++) {
-        
         if (nama == barangElektronik[index]) {
             return true;
-        }else{
-            return false;
         }
     }
+    return false;
 }
 
 function cetak() {
